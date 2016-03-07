@@ -1,2 +1,3 @@
-export routerProvider from './routerProvider';
-export locationProvider from './locationProvider';
+export provideRouter from './provideRouter';
+export provideLocation from './provideLocation';
+export provideRouterAndLocation from './provideRouterAndLocation';
