@@ -10,17 +10,15 @@ function createComponent(CurrentComponent) {
   inherits(Provider, Component);
 
   const componentName = CurrentComponent.displayName || CurrentComponent.name;
-  Provider.displayName = componentName + 'RouterProvider';
+  Provider.displayName = componentName + 'RouterAndLocationProvider';
   Provider.contextTypes = {
     router: PropTypes.object.isRequired,
-    location: PropTypes.object,
   };
 
   Provider.prototype.render = function render() {
     return createElement(CurrentComponent, {
       ...this.props,
       router: this.context.router,
-      location: this.context.location,
     });
   };
 
