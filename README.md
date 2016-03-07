@@ -1,6 +1,6 @@
 # React Router Provider
 
-Provide router as property to any component. You can use it as decorator too.
+Provide router or location as property to any child component. You can use it as decorator too.
 
 [![NPM version][npm-image]][npm-url]
 
@@ -20,21 +20,22 @@ npm install react-router-provider
 Star this project on [GitHub][github-url].
 
 
-## Usage
+## Usage provideRouter
 
 ### Decorator
 
 ````js
 import React, { Component } from 'react';
-import provideRouter from 'react-router-provider';
+import { provideRouter } from 'react-router-provider';
 
 @provideRouter
 export default class Example extends Component {
   render() {
     const router = this.props.router;
+    const isActive = router.isActive();
 
     return (
-      <div>{router.location.query}</div>
+      <div>{router.isActive}</div>
     );
   }
 }
@@ -44,19 +45,59 @@ export default class Example extends Component {
 
 ```js
 import React, { Component } from 'react';
-import provideRouter from 'react-router-provider';
+import { provideRouter } from 'react-router-provider';
 
 class Example extends Component {
   render() {
     const router = this.props.router;
+    const isActive = router.isActive();
 
     return (
-      <div>{router.location.query}</div>
+      <div>{router.isActive}</div>
     );
   }
 }
 
 export default provideRouter(Example);
+```
+
+## Usage provideLocation
+
+### Decorator
+
+````js
+import React, { Component } from 'react';
+import { provideLocation } from 'react-router-provider';
+
+@provideLocation
+export default class Example extends Component {
+  render() {
+    const location = this.props.location;
+
+    return (
+      <div>{location.query}</div>
+    );
+  }
+}
+```
+
+### Function
+
+```js
+import React, { Component } from 'react';
+import { provideLocation } from 'react-router-provider';
+
+class Example extends Component {
+  render() {
+    const location = this.props.location;
+
+    return (
+      <div>{location.query}</div>
+    );
+  }
+}
+
+export default provideLocation(Example);
 ```
 
 ## Try our other React components
