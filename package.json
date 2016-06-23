@@ -1,6 +1,6 @@
 {
   "name": "react-router-provider",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Provide router as property to any component",
   "author": {
     "name": "Zlatko Fedor",
