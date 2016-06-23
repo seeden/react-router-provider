@@ -1,6 +1,6 @@
 {
   "name": "react-router-provider",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "description": "Provide router as property to any component",
   "author": {
     "name": "Zlatko Fedor",
@@ -31,7 +31,7 @@
     "eslint": "node ./node_modules/eslint/bin/eslint.js --ext .js,.jsx ."
   },
   "dependencies": {
-    "react-provide-props": "^1.0.5"
+    "react-provide-props": "^2.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.10.1",
