@@ -1,3 +1,10 @@
-export provideRouter from './provideRouter';
-export provideLocation from './provideLocation';
-export provideRouterAndLocation from './provideRouterAndLocation';
+import { PropTypes } from 'react';
+import createProvider from 'react-provide-props';
+
+export default createProvider('RouterProvider', (props, context) => ({
+  router: context.router,
+}), {
+  router: PropTypes.object.isRequired,
+}, {
+  router: PropTypes.object.isRequired,
+});
